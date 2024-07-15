@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jul 15 2024
+
+@author: Christophe Laf
+
+This program is used to find the boxes which contains robot parts.
+Exercice for OSS Factory
+"""
+
 from collections import Counter
 
 # Function to sort the strings with 2 or 3 same characters
