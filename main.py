@@ -14,21 +14,28 @@ from collections import Counter
 
 
 def contains_same_chars(string, n):
+    """Search same characters n times in a string"""
     count = Counter(string)
     return any(value == n for value in count.values())
 
 
 def sort_string_with_2_same_chars(strings):
+    """Sort the strings with 2 same characters"""
+    # Return the strings which contains 2 same characters
     return [string for string in strings if contains_same_chars(string, 2)]
 
 
 def sort_string_with_3_same_chars(strings):
+    """Sort the strings with 3 same characters"""
+    # Return the strings which contains 3 same characters
     return [string for string in strings if contains_same_chars(string, 3)]
 
 # Function to compare the strings
 
 
 def one_different_char(string1, string2):
+    """Compare two strings and return True if they differ by exactly one character"""
+    # Return Boolean
     differ = 0
     for c1, c2 in zip(string1, string2):
         if c1 != c2:
@@ -39,6 +46,8 @@ def one_different_char(string1, string2):
 
 
 def find_strings_with_one_different_char(strings):
+    """Find pairs of strings that differ by exactly one character"""
+    # Return the pairs of strings that differ by exactly one character
     pairs = []
     n = len(strings)
     for i in range(n):
@@ -49,6 +58,8 @@ def find_strings_with_one_different_char(strings):
 
 
 def keep_commons_chars(string1, string2):
+    """Keep the commons characters between two strings"""
+    # Return the commons characters as a string
     result = []
     for c1, c2 in zip(string1, string2):
         if c1 == c2:
@@ -59,6 +70,13 @@ def keep_commons_chars(string1, string2):
 
 
 def main_function(li):
+    """Main function to find the boxes which contains robot parts"""
+    # Return IDs containing 2 same characters
+    # Return IDs containing 3 same characters
+    # Return the checksum
+    # Return IDs boxes which contains robot parts
+    # Return the commons characters between the boxes
+
     two_chars = sort_string_with_2_same_chars(li)
     two_chars = list(set(two_chars))
     three_chars = sort_string_with_3_same_chars(li)
