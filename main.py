@@ -69,13 +69,13 @@ def main_function(li):
 # The id boxes list
 
 
-id_collection1 = []
+id_collection = []
 with open("input.txt") as file:
     for line in file:
-        id_collection1.append(line.strip())
+        id_collection.append(line.strip())
 
 
 # Call the main function
 
 
-main_function(id_collection1)
+main_function(id_collection)
